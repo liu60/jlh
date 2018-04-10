@@ -1,0 +1,57 @@
+.banquan{
+  width: 100%;
+  text-align: center;
+  background: #292d3b;
+  color: #fff;
+  padding: 10px 0;
+}
+.foot-bg{
+  background: #313546;
+}
+.foot-ul{
+  width: 1200px;
+  margin: 0 auto;
+  height: 200px;
+  box-sizing: border-box;
+  padding: 40px 0;
+}
+.foot-ul>li{
+  float: left;
+  padding-top: 10px;
+  width: 33%;
+  box-sizing: border-box;
+  padding-left: 84px;
+}
+.foot-icon1{
+  padding: 16px 66px;
+  background: url("./../images/tubiao.png") -10px -236px;
+}
+.foot-icon2{
+  padding: 16px 66px;
+  background: url("./../images/tubiao.png") -10px -177px;
+}
+.foot-icon3{
+  padding: 16px 66px;
+  background: url("./../images/tubiao.png") -10px -121px;
+}
+.foot-inside{
+  color: #fff;
+  margin-top: 60px;
+}
+.foot-inside li{
+  padding: 0 23px;
+}
+.foot-inside li:first-child{
+  padding-left: 0;
+}
+.foot-inside a{
+  color: #fff;
+}
+.foot-line{
+  border-right: 1px solid #fff;
+}
+.footer-line{
+  width: 1px!important;
+  padding:60px 0!important;
+  background: #fff;
+}
