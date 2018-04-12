@@ -3,7 +3,7 @@
     <headers></headers>
     <router-view/>
     <footers></footers>
-    <boots></boots>
+    <boots v-if="$route.path !=='/reg'"></boots>
   </div>
 </template>
 

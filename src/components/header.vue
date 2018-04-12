@@ -3,7 +3,7 @@
     <div class="head-nav-top">
       <div class="nav-top-bg">
         <div class="fl">本地时间:  {{dateFilter(time)}}</div>
-        <ul style="display: none" class="head-login fr">
+        <ul class="head-login fr">
           <li>
             会员账号:
             <input type="text" class="login-input">
@@ -25,7 +25,7 @@
             </router-link>
           </li>
         </ul>
-        <ul class="head-login fr">
+        <ul style="display: none" class="head-login fr">
           <li>
             会员账号:
             <span>anne</span>

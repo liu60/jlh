@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import index from './../components/index'
 import daili from './../components/daili'
+import reg from  './../components/register'
 
 Vue.use(Router);
 
@@ -21,6 +22,11 @@ export default new Router({
       path:'/daili',
       name:'daili',
       component:daili
+    },
+    {
+      path:'/reg',
+      name:'reg',
+      component:reg
     }
   ]
 })
