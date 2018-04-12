@@ -12,6 +12,7 @@ import pay from './../components/personal-comp/pay.vue'
 import bank from './../components/personal-comp/bank.vue'
 import union from './../components/personal-comp/union.vue'
 import online from './../components/personal-comp/online.vue'
+import reg from  './../components/register'
 
 Vue.use(Router);
 
@@ -64,6 +65,16 @@ export default new Router({
         path: 'online',
         component: online,
       }]
+    },
+    {
+      path: '/daili',
+      name: 'daili',
+      component: daili
+    },
+    {
+      path: '/reg',
+      name: 'reg',
+      component: reg
     }
   ]
 })

@@ -16,13 +16,14 @@
   color: #fff;
 }
 .nav-top-bg{
-  width: 1200px;
+  width: 1100px;
   margin: 0 auto;
 }
 .head-login li{
   float: left;
-  margin-right: 10px;
+  margin-right: 18px;
   height: 40px;
+  font-size: 13px;
 }
 .login-input{
   border: 0 solid blue;
@@ -31,10 +32,11 @@
   height: 20px;
   padding: 0 10px;
   box-sizing: border-box;
+  background: #d8dbdb;
 }
-.login-input:focus{
-  outline: none;
-}
+/*.login-input:focus{*/
+  /*outline: none;*/
+/*}*/
 .yzm{
   float: right;
   width: 60px;
@@ -100,14 +102,13 @@
   outline: none;
 }
 .head-nav-bottom{
-  width: 1200px;
+  width: 1100px;
   margin: 0 auto;
-  height: 60px;
-  line-height: 60px;
+  height: 80px;
+  line-height: 80px;
 }
 .jlh-logo{
   float: left;
-  padding-top: 9px;
 }
 .nav-bottom-right li{
   float: left;
@@ -115,6 +116,7 @@
   margin: 0 7px;
   width: 93px;
   text-align: center;
+  letter-spacing: 3px;
 }
 .nav-bottom-right li:hover{
   color: #018cff;

@@ -3,7 +3,7 @@
     <headers></headers>
     <router-view/>
     <footers></footers>
-    <boots></boots>
+    <boots v-if="$route.path !=='/reg'"></boots>
   </div>
 </template>
 
@@ -32,9 +32,9 @@ export default {
   .pr{
     position: relative;
   }
-  button:focus{
-    outline: none;
-  }
+  /*button:focus{*/
+    /*outline: none;*/
+  /*}*/
   .fl{
     float: left;
   }

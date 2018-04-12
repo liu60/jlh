@@ -33,6 +33,6 @@
     <div class="banquan">Copyright © 2007-2018 金连环所有权利受到法律保护。</div>
   </div>
 </template>
-<style>
+<style scoped>
   @import "./../assets/css/footer.css";
 </style>

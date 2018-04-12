@@ -1,7 +1,9 @@
 <template>
   <div>
     <a href="#">
-      <div class="boots"></div>
+      <div class="boots">
+        <img src="./../assets/images/boots.png" width="100%">
+      </div>
     </a>
   </div>
 </template>
@@ -10,8 +12,5 @@
     position: fixed;
     right: 0;
     top: 200px;
-    width: 209px;
-    height: 557px;
-    background: url("./../assets/images/boots.png");
   }
 </style>
