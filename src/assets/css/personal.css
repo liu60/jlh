@@ -1,0 +1,44 @@
+.personal{
+  background:url('../images/personal-bg.jpg') top center no-repeat;
+  overflow: hidden;
+}
+.personal .center{
+  width: 1080px;
+  height: 790px;
+  margin: 20px auto;
+  background-color: rgba(255,255,255,.8);
+}
+.personal .center .title{
+  color: #ff8c25;
+  border-bottom: 1px solid #b0b0b0;
+  margin: 20px;
+  padding:14px 27px 0;
+  font-size: 26px;
+  line-height: 58px;
+}
+.personal .center .left-side{
+  float: left;
+  border-right:1px solid #a0a0a0;
+  height: calc(100% - 150px);
+  padding:0 20px 0 33px;
+}
+
+.personal .center .left-side li{
+  width: 238px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 24px;
+  background-color: #fff;
+  color: #696969;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+.personal .center .left-side .current{
+  background-color: #0088ff;
+  color: #fff;
+}
+.personal .right{
+  padding-left: 292px;
+}

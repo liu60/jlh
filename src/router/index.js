@@ -2,6 +2,16 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import index from './../components/index'
 import daili from './../components/daili'
+import personal from './../components/personal'
+import payType from './../components/personal-comp/pay-type.vue'
+import getMoney from './../components/personal-comp/get-money.vue'
+import transfer from './../components/personal-comp/transfer.vue'
+import qq from './../components/personal-comp/qq.vue'
+import wx from './../components/personal-comp/wx.vue'
+import pay from './../components/personal-comp/pay.vue'
+import bank from './../components/personal-comp/bank.vue'
+import union from './../components/personal-comp/union.vue'
+import online from './../components/personal-comp/online.vue'
 
 Vue.use(Router);
 
@@ -18,9 +28,42 @@ export default new Router({
       component: index
     },
     {
-      path:'/daili',
-      name:'daili',
-      component:daili
+      path: '/daili',
+      name: 'daili',
+      component: daili
+    },
+    {
+      path: '/personal',
+      name: '/personal',
+      component: personal,
+      children: [{
+        path: 'pay-type',
+        component: payType,
+      }, {
+        path: 'get-money',
+        component: getMoney,
+      }, {
+        path: 'transfer',
+        component: transfer,
+      }, {
+        path: 'qq',
+        component: qq,
+      }, {
+        path: 'wx',
+        component: wx,
+      }, {
+        path: 'pay',
+        component: pay,
+      }, {
+        path: 'bank',
+        component: bank,
+      }, {
+        path: 'union',
+        component: union,
+      }, {
+        path: 'online',
+        component: online,
+      }]
     }
   ]
 })
