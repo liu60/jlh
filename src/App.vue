@@ -32,9 +32,9 @@ export default {
   .pr{
     position: relative;
   }
-  button:focus{
-    outline: none;
-  }
+  /*button:focus{*/
+    /*outline: none;*/
+  /*}*/
   .fl{
     float: left;
   }

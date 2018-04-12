@@ -77,6 +77,6 @@
     </div>
   </div>
 </template>
-<style>
+<style scoped>
   @import "./../assets/css/index.css";
 </style>
