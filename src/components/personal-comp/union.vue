@@ -12,5 +12,5 @@
 </script>
 <style>
 
-  @import "../../assets/css/personal-comp/union.css";
+  @import "../../assets/css/personal-comp/common.css";
 </style>

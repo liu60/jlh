@@ -11,5 +11,5 @@
   }
 </script>
 <style>
-  @import "../../assets/css/personal-comp/wx.css";
+  @import "../../assets/css/personal-comp/common.css";
 </style>

@@ -1,15 +1,15 @@
 <template>
-    <div>
+  <div>
 
-    </div>
+  </div>
 </template>
 <script>
-    export default{
-        data(){
-            return {}
-        }
+  export default{
+    data(){
+      return {}
     }
+  }
 </script>
 <style>
-  @import "../../assets/css/personal-comp/qq.css";
+  @import "../../assets/css/personal-comp/common.css";
 </style>

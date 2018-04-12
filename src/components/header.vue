@@ -38,7 +38,7 @@
             <button class="chongzhi">充值</button>
           </li>
           <li>
-            <router-link style="color: #fff" to="/personal/pay-type">个人账户</router-link>
+            <router-link style="color: #fff" to="/personal/save-money/qq">个人账户</router-link>
           </li>
           <li>
             积分:

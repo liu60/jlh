@@ -11,5 +11,5 @@
     }
 </script>
 <style>
-  @import "../../assets/css/personal-comp/online.css";
+  @import "../../assets/css/personal-comp/common.css";
 </style>

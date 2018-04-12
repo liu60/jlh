@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import index from './../components/index'
 import daili from './../components/daili'
 import personal from './../components/personal'
-import payType from './../components/personal-comp/pay-type.vue'
+import saveMoney from './../components/personal-comp/save-money.vue'
 import getMoney from './../components/personal-comp/get-money.vue'
 import transfer from './../components/personal-comp/transfer.vue'
 import qq from './../components/personal-comp/qq.vue'
@@ -38,32 +38,33 @@ export default new Router({
       name: '/personal',
       component: personal,
       children: [{
-        path: 'pay-type',
-        component: payType,
+        path: 'save-money',
+        component: saveMoney,
+        children: [{
+          path: 'qq',
+          component: qq,
+        }, {
+          path: 'wx',
+          component: wx,
+        }, {
+          path: 'pay',
+          component: pay,
+        }, {
+          path: 'bank',
+          component: bank,
+        }, {
+          path: 'union',
+          component: union,
+        }, {
+          path: 'online',
+          component: online,
+        }]
       }, {
         path: 'get-money',
         component: getMoney,
       }, {
         path: 'transfer',
         component: transfer,
-      }, {
-        path: 'qq',
-        component: qq,
-      }, {
-        path: 'wx',
-        component: wx,
-      }, {
-        path: 'pay',
-        component: pay,
-      }, {
-        path: 'bank',
-        component: bank,
-      }, {
-        path: 'union',
-        component: union,
-      }, {
-        path: 'online',
-        component: online,
       }]
     },
     {

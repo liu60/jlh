@@ -110,7 +110,7 @@
   color: #fff;
   background-color: #959595;
   border-color: #a6a6a6;
-  cursor: not-allowed;
+  cursor: pointer;
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
@@ -129,14 +129,17 @@
   height: 60px;
   letter-spacing: 15px;
 }
+.check-button-disable.disable{
+  cursor: not-allowed;
+}
 .check-button-disable{
   margin-left: 296px;
   margin-top: 40px;
   color: #fff;
   background-color: #fb8c29;
   border-color: #f37300;
-  cursor: not-allowed;
   display: inline-block;
+  cursor: pointer;
   line-height: 1;
   white-space: nowrap;
   -webkit-appearance: none;

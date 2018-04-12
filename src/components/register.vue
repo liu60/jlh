@@ -67,7 +67,7 @@
             </div>
           </div>
           <div>
-            <button type="button" class="check-button-disable" :disabled="!check">提交</button>
+            <button type="button" class="check-button-disable" :class="{disable: !check}" :disabled="!check">提交</button>
             <button type="button" class="check-button">取消</button>
             <div style="margin-top: 35px;margin-left: 267px;margin-bottom: 35px;color: #ff0000">
               <input type="checkbox" v-model="check"> 本人已年满十八岁，在此网站所有活动并没有抵触所在国家所管辖的法律
