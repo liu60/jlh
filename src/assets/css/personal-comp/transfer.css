@@ -94,3 +94,34 @@
   width: 100%;
   border-bottom: 1px solid #666;
 }
+
+.form > div{
+  height: 35px;
+  margin-top: 15px;
+}
+
+.form input{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.form select{
+  width: 45%;
+  height: 100%;
+}
+
+.form .button{
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+  background-color: #0088ff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.form .tip{
+  color: #f00;
+  margin-top: 40px;
+  width: 180%;
+}

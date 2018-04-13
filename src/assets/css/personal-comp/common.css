@@ -1,0 +1,94 @@
+.title1 {
+  color: #0088ff;
+  margin: 10px auto;
+  width: 480px;
+}
+
+.cell{
+  height: 44px;
+  line-height: 44px;
+  width: 400px;
+  color: #666;
+  margin: 20px auto;
+}
+
+
+.cell .left {
+  text-align: left;
+  float: left;
+}
+
+.cell .right{
+  width: 60%;
+  padding: 0;
+  float: right;
+}
+
+.cell input {
+  height: 34px;
+  line-height: 34px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cell select {
+  height: 34px;
+  line-height: 34px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cell textarea {
+  line-height: 34px;
+  resize: none;
+  width: 100%;
+}
+
+.cell .required::after {
+  content: ' *';
+  display: inline-block;
+  color: #f00;
+}
+
+
+.submit {
+  background: #fe9231;
+  text-decoration: none;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  margin: 30px;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.reset {
+  background: #666;
+  text-decoration: none;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  margin: 30px;
+  color: #fff;
+  border-radius: 6px;
+}

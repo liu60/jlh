@@ -43,7 +43,22 @@
     </ul>
     <div class="form">
       <p>户内转账</p>
-
+      <div>
+        <select class="output">
+          <option value="">请选择转出</option>
+        </select>
+        &gt;
+        <select class="input">
+          <option value="">请选择转入</option>
+        </select>
+      </div>
+      <div>
+        <input type="text" placeholder="转账金额">
+      </div>
+      <div class="button">开始转账</div>
+      <div class="tip">
+        温馨提示：回力娱乐城仅AG、PT、MG、欧博、JA SPORT及eBET平台需进行户内转账，其他平台均通用。
+      </div>
     </div>
   </div>
 </template>
