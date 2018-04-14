@@ -55,7 +55,7 @@
       <ul class="nav-bottom-right fr">
         <li><router-link to="/index">首页</router-link></li>
         <li><router-link to="">体育投注</router-link></li>
-        <li><router-link to="">优惠中心</router-link></li>
+        <li><router-link to="/favourable">优惠中心</router-link></li>
         <li><router-link to="">手机投注</router-link></li>
         <li><router-link to="/daili">代理合作</router-link></li>
         <li><router-link style="color: #ff4e00" to="">在线咨询</router-link></li>
