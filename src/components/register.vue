@@ -83,8 +83,26 @@
     data (){
       return {
         name:'reg',
-        check: false
+        check: false,
+        user:'会员名称',
+        psd:'会员密码',
+        cpsd:'确认会员密码',
+        email:'电邮地址'
       }
+    },
+    mounted(){
+        this.axios.post('/api/web/Account/Register',{
+          Username:this.user,
+          Password:this.psd,
+          ConfirmPassword:this.cpsd,
+          Email:this.email,
+        })
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     }
   }
 </script>
