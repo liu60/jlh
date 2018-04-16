@@ -9,16 +9,16 @@
             <label class="el-form-item__label" style="width: 35%;">用户名:</label>
             <div class="el-form-item__content" style="margin-left: 30%;">
               <div class="el-select">
-                <input class="input-control">
+                <input v-model="username" class="input-control">
               </div>
-              <div class="read">核实</div>
+              <div class="read" @click="checkUserName">核实</div>
             </div>
           </div>
           <div class="step">
             <label class="el-form-item__label" style="width: 35%;"><i class="red">*</i>登录密码:</label>
             <div class="el-form-item__content" style="margin-left: 30%;">
               <div class="el-select">
-                <input class="input-control">
+                <input v-model="password" type="password" class="input-control">
               </div>
               <div class="red cue">6-14为数字加字母</div>
             </div>
@@ -27,7 +27,7 @@
             <label class="el-form-item__label" style="width: 35%;"><i class="red">*</i>确认登录密码:</label>
             <div class="el-form-item__content" style="margin-left: 30%;">
               <div class="el-select">
-                <input class="input-control">
+                <input v-model="confirmPassword" type="password" class="input-control">
               </div>
               <div class="red cue">6-14为数字加字母</div>
             </div>
@@ -36,7 +36,7 @@
             <label class="el-form-item__label" style="width: 35%;">电子邮箱:</label>
             <div class="el-form-item__content" style="margin-left: 30%;">
               <div class="el-select">
-                <input class="input-control">
+                <input v-model="email" class="input-control">
               </div>
               <div class="read">核实</div>
             </div>
@@ -45,7 +45,7 @@
             <label class="el-form-item__label" style="width: 35%;">联系电话:</label>
             <div class="el-form-item__content" style="margin-left: 30%;">
               <div class="el-select">
-                <input class="input-control">
+                <input v-model="tel" class="input-control">
               </div>
             </div>
           </div>
@@ -82,27 +82,48 @@
   export default {
     data (){
       return {
-        name:'reg',
+        name: 'reg',
         check: false,
-        user:'会员名称',
-        psd:'会员密码',
-        cpsd:'确认会员密码',
-        email:'电邮地址'
+        username: '',
+        password: '会员密码',
+        confirmPassword: '确认会员密码',
+        email: '电邮地址'
+      }
+    },
+    methods: {
+      checkUserName(){
+        this.$http.get('/api/web/Account/IsUsernameExists', {
+          params: {
+            username: this.username
+          }
+        }).then(res => {
+          if (res.data === false) {
+            alert('该用户名已经存在')
+          } else {
+            alert('该用户名可以使用')
+          }
+        })
+      },
+      submit(){
+        var regUserName = /^[A-Za-z0-9]+$/
+        var regEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+        if (!regUserName.test(this.username))return alert('用户名只能是英文和数字')
+        if (!regEmail.test(this.email))return alert('电子邮箱格式不正确')
+        if (this.password !== this.confirmPassword)return alert('密码和确认密码不一致')
+
+        this.$http.post('/api/web/Account/Register', {
+          Username: this.username,
+          Password: this.password,
+          ConfirmPassword: this.confirmPassword,
+          Email: this.email,
+          PhoneNumber: this.tel
+        }).then(function (res) {
+          alert('注册成功')
+          this.$http.defaults.headers.common['Authorization'] = res.data.accessToken
+        })
       }
     },
     mounted(){
-        this.axios.post('/api/web/Account/Register',{
-          Username:this.user,
-          Password:this.psd,
-          ConfirmPassword:this.cpsd,
-          Email:this.email,
-        })
-        .then(function (response) {
-          console.log(response);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
     }
   }
 </script>
