@@ -8,7 +8,7 @@ import VueAxios from 'vue-axios'
 
 Vue.config.productionTip = false;
 Vue.use(VueAxios,axios);
-axios.defaults.baseURL = 'https://api.example.com';
+axios.defaults.baseURL = 'http://uatapi.sa99.xyz';
 
 /* eslint-disable no-new */
 new Vue({
