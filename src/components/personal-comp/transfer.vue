@@ -57,7 +57,7 @@
       </div>
       <div class="button">开始转账</div>
       <div class="tip">
-        温馨提示：回力娱乐城仅AG、PT、MG、欧博、JA SPORT及eBET平台需进行户内转账，其他平台均通用。
+        温馨提示：金连环体育仅AG、PT、MG、欧博、JA SPORT及eBET平台需进行户内转账，其他平台均通用。
       </div>
     </div>
   </div>

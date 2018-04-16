@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import index from './../components/index.vue'
 import daili from './../components/daili.vue'
-import personal from './../components/personal'
+import personal from './../components/personal.vue'
 import saveMoney from './../components/personal-comp/save-money.vue'
 import getMoney from './../components/personal-comp/get-money.vue'
 import transfer from './../components/personal-comp/transfer.vue'
@@ -13,7 +13,7 @@ import bank from './../components/personal-comp/bank.vue'
 import union from './../components/personal-comp/union.vue'
 import online from './../components/personal-comp/online.vue'
 import reg from  './../components/register.vue'
-import favourable from './../components/favourable'
+import favourable from './../components/favourable.vue'
 
 Vue.use(Router);
 
@@ -79,11 +79,6 @@ export default new Router({
         path: 'transfer',
         component: transfer,
       }]
-    },
-    {
-      path: '/daili',
-      name: 'daili',
-      component: daili
     },
     {
       path: '/reg',
