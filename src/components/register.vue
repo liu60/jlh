@@ -38,7 +38,7 @@
               <div class="el-select">
                 <input v-model="email" class="input-control">
               </div>
-              <div class="read">核实</div>
+              <div class="read" @click="checkEmail">核实</div>
             </div>
           </div>
           <div class="reg-phone">
@@ -67,7 +67,7 @@
             </div>
           </div>
           <div>
-            <button type="button" class="check-button-disable" :class="{disable: !check}" :disabled="!check">提交</button>
+            <button @click="submit" type="button" class="check-button-disable" :class="{disable: !check}" :disabled="!check">提交</button>
             <button type="button" class="check-button">取消</button>
             <div style="margin-top: 35px;margin-left: 267px;margin-bottom: 35px;color: #ff0000">
               <input type="checkbox" v-model="check"> 本人已年满十八岁，在此网站所有活动并没有抵触所在国家所管辖的法律
@@ -87,12 +87,13 @@
         username: '',
         password: '会员密码',
         confirmPassword: '确认会员密码',
-        email: '电邮地址'
+        email: '电邮地址',
+        tel:'电话号码'
       }
     },
     methods: {
       checkUserName(){
-        this.$http.get('/api/web/Account/IsUsernameExists', {
+        this.$http.post('/api/web/Account/IsUsernameExists?username=waynetest', {
           params: {
             username: this.username
           }
@@ -104,12 +105,25 @@
           }
         })
       },
+      checkEmail(){
+        this.$http.post('/api/web/Account/IsEmailExists',{
+          params:{
+            email:this.email
+          }
+        }).then(res => {
+          if (res.data === false) {
+            alert('该邮箱已被使用')
+          } else {
+            alert('该邮箱可以使用')
+          }
+        })
+      },
       submit(){
-        var regUserName = /^[A-Za-z0-9]+$/
-        var regEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
-        if (!regUserName.test(this.username))return alert('用户名只能是英文和数字')
-        if (!regEmail.test(this.email))return alert('电子邮箱格式不正确')
-        if (this.password !== this.confirmPassword)return alert('密码和确认密码不一致')
+        var regUserName = /^[A-Za-z0-9]+$/;
+        var regEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+        if (!regUserName.test(this.username))return alert('用户名只能是英文和数字');
+        if (!regEmail.test(this.email))return alert('电子邮箱格式不正确');
+        if (this.password !== this.confirmPassword)return alert('密码和确认密码不一致');
 
         this.$http.post('/api/web/Account/Register', {
           Username: this.username,
@@ -118,7 +132,7 @@
           Email: this.email,
           PhoneNumber: this.tel
         }).then(function (res) {
-          alert('注册成功')
+          alert('注册成功');
           this.$http.defaults.headers.common['Authorization'] = res.data.accessToken
         })
       }
