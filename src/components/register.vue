@@ -38,7 +38,6 @@
               <div class="el-select">
                 <input v-model="email" class="input-control">
               </div>
-              <div class="read" @click="checkEmail">核实</div>
             </div>
           </div>
           <div class="reg-phone">
@@ -93,28 +92,15 @@
     },
     methods: {
       checkUserName(){
-        this.$http.post('/api/web/Account/IsUsernameExists?username=waynetest', {
+        this.$http.post('/api/web/Account/IsUsernameExists?username=' + this.username, {
           params: {
             username: this.username
           }
         }).then(res => {
-          if (res.data === false) {
+          if (res.data === true) {
             alert('该用户名已经存在')
           } else {
             alert('该用户名可以使用')
-          }
-        })
-      },
-      checkEmail(){
-        this.$http.post('/api/web/Account/IsEmailExists',{
-          params:{
-            email:this.email
-          }
-        }).then(res => {
-          if (res.data === false) {
-            alert('该邮箱已被使用')
-          } else {
-            alert('该邮箱可以使用')
           }
         })
       },
@@ -133,7 +119,7 @@
           PhoneNumber: this.tel
         }).then(function (res) {
           alert('注册成功');
-          this.$http.defaults.headers.common['Authorization'] = res.data.accessToken
+          this.$http.defaults.headers.common['Authorization'] = res.data.accessToken;
         })
       }
     },
